@@ -1,0 +1,38 @@
+﻿@model SaglikUrunleri.Entity.Entity.Urun
+
+@{
+    ViewBag.Title = "UrunDetay";
+    Layout = "~/Views/Shared/_SaglikLayout.cshtml";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<h2>UrunDetay</h2>
+
+<div class="row masonry-grid-fitrows grid-space-20">
+    <div class="col-md-6 masonry-grid-item">
+        <img src="@Model.urunResimYolu1" alt="Alternate Text" />
+    </div>
+    <div class="col-md-6 masonry-grid-item">
+        <div class="card">
+            <div class="card-header">
+                <h3>@Model.urunKodu</h3>
+            </div>
+            <div class="card-body">
+                <dl class="dl-horizontal">
+
+                    <dt><label class="text-light bg-danger radius">Ürün Adı :</label></dt>
+                    <dd>@Html.DisplayFor(m => m.urunAd)</dd>
+
+                    <dt><label class="text-light bg-danger radius">Ürün Fiyatı :</label></dt>
+                    <dd>@Html.DisplayFor(m => m.urunFiyat)</dd>
+                    <dt><label class="text-light bg-danger radius">Ürün Açıklama :</label></dt>
+                    <dd>@Html.DisplayFor(m => m.urunBilgisi)</dd>
+
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
